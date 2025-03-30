@@ -1,0 +1,492 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ------MEYER RESET */
+
+
+
+
+
+
+
+
+/* ------GLOBAL CSS */
+
+:root {
+    --white: #FFFFFF;
+    --black: #0D0D0D;
+    --primary: #EE6515;
+    --gray: #5A5A5A;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "Arial", sans-serif !important;
+    color: var(--white);
+}
+
+body{
+    background-color: var(--black);
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 32px;
+}
+
+h1, h1 span{
+    font-size: 8rem;
+    font-weight: 900;
+    color: var(--white);
+}
+
+h2, h2 span{
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: -0.2rem;
+}
+
+h4, h4 span{
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+p{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/*Just add accent class to color the text*/
+.accent{
+    background: linear-gradient(
+        0deg,
+        rgba(20, 135, 235, 1) 0%,
+        rgba(114, 210, 255, 1) 100%
+      );
+      background-clip: text !important;
+      color: transparent !important;
+}
+
+.subheader-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.centered{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------NAVBAR */
+
+
+.logout {
+    display: none;
+}
+.logo-section{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6px;
+}
+
+.logout:hover{
+    background: linear-gradient(
+        90deg,
+        rgba(250, 80, 11, 1) 0%,
+        rgba(250, 157, 26, 1) 50%,  
+        rgba(247, 183, 22, 1) 100%  
+      );
+      background-clip: text !important;
+      color: transparent !important;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.navbar{
+    position: absolute !important;
+    margin-top: 16px;
+    width: 100%;
+    z-index: 1;
+    background-color: transparent !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+.container-fluid{
+    background-color: transparent;
+    padding: 0px 64px;
+
+}
+
+
+.nav-link{
+    color: white !important;
+}
+
+.nav-link:hover{
+    background: linear-gradient(
+        90deg,
+        rgba(250, 80, 11, 1) 0%,
+        rgba(250, 157, 26, 1) 50%,  
+        rgba(247, 183, 22, 1) 100%  
+      );
+      background-clip: text !important;
+      color: transparent !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+
+
+.container-fluid{
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+
+
+}
+
+.book-button{
+    background-color: transparent;
+    border: 1px solid var(--white);
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.book-button:hover{
+    background-color: var(--primary);
+    border: none;
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 1024px) { 
+    .logout {
+        display: block; 
+    }
+
+}
+
+
+
+
+
+
+/* ----------- BANNER */
+
+
+.banner-container{
+    width: 100%;
+    height: 100vh;
+    background-image: url("./images/assets/bg-wide.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-toggler-container{
+    display: block;
+}
+.navbar-collapse-container{
+    display: none;
+}
+
+.denardpic{
+    height: 95%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.bannertext-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 64px;
+    margin-bottom: 64px;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: -1rem;
+}
+
+.tagline, .tagline span{
+    margin-left: 52px;
+    font-size: 2rem;
+}
+
+.re{
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.invest{
+    font-size: 12rem;
+}
+
+
+.name-container{
+    position: absolute;
+    bottom: 4rem;
+    margin-left: 64px;
+}
+
+.denard{
+    font-size: 2rem;
+}
+
+.firme{
+    font-size: 7rem;
+    margin-top: 8px;
+}
+
+.line{
+    width: 110%;
+    height: 1px;
+    border: 1px solid white;
+}
+
+.wolf{
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 1000px){
+    .tagline, .tagline span{
+        font-size: 1.3rem;
+        margin-left: 32px;
+    }
+    .re{
+        font-size: 4rem;
+    }
+    .invest{
+        font-size: 8rem;
+    }
+    .denard{
+        font-size: 1.5rem;
+    }
+    .firme{
+        font-size: 4.5rem;
+    }
+    .line{
+        width: 110%;
+    }
+    .wolf{
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 500px){
+    .bannertext-container{
+        margin-bottom: 20rem;
+    }
+    .tagline, .tagline span{
+        font-size: 0.8rem;
+        margin-left: 24px;
+        margin-bottom: 0.8rem;
+    }
+    .re{
+        font-size: 3rem;
+    }
+    .invest{
+        font-size: 5rem;
+    }
+    .denard{
+        font-size: 1.2rem;
+    }
+    .firme{
+        font-size: 4rem;
+    }
+    .line{
+        width: 110%;
+    }
+    .wolf{
+        font-size: 0.7rem;
+        margin-top: 0.5rem;
+    }
+    .denardpic{
+        height: 75%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+    .name-container{
+        position: absolute;
+        z-index: 2;
+        margin-left: 32px;
+    }
+}
+
+
+
+
+/* ----------- EARN AND LEARN */
+
+.earn-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.subhead-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.earn-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 64px;
+}
+
+.earn-item{
+    width: 100%;
+    height: 120px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gray);
+    border-radius: 16px;
+    padding: 0px 32px;
+}
+
+.circle {
+    position: absolute;
+    display: flex; /* Enables flex properties */
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gray);
+    border-radius: 100%;
+    height: 54px;
+    width: 54px;
+    background-color: var(--black);
+    top: 0; 
+    transform: translateY(-50%); 
+}
+
+.earn-text{
+    margin-top: 12px;
+}
+
+.circle-icon{
+    width: 60%;
+    height: 60%;
+}
+
+
+
+/* ----------- EARN AND LEARN */
+
+.subhead-container-info{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.info-text{
+    text-align: end;
+}
