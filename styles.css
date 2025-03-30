@@ -756,9 +756,230 @@ a{
 }
 
 
+/* ----------- SCHEDULE SECTION */
+
+.schedule-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 92px;
+    width: 100%;
+}
+
+.schedule-container{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 64px;
+    width: 100%;
+}
+
+.schedule-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    padding-top: 64px;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--gray);
+    border-radius: 16px;
+    width: 100%;
+}
+
+.day{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0px;
+    width: 200px;
+
+    border: 1px solid var(--gray);
+    background-color: var(--black);
+    border-radius: 16px;
+
+    z-index: 1;
+    top: 0;
+    transform: translateY(-50%);
+
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.sched-subhead{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sched-title{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.sched-tagline{
+    font-size: 1rem;
+    text-align: center;
+    margin-top: -2px;
+}
+
+
+
+
+.timeslot-list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 32px;
+}
+
+.timeslot{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid var(--gray);
+    border-radius: 16px;
+    width: 80%;
+    height: 72px;
+    padding: 0px 32px;
+}
+
+.time{
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.event-item{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    gap: 2px;
+}
+
+.event-title{
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: end;
+}
+
+.event-subhead{
+    font-size: 0.8rem;
+}
+
+@media (max-width: 650px){
+
+    .schedule-section{
+        margin-top: 300px;
+    }
+    .timeslot{
+        width: 100%;
+    }
+
+
+    .event-title{
+        font-weight: 600;
+        font-size: 0.8rem;
+        text-align: end;
+    }
+    
+    .event-subhead{
+        font-size: 0.6rem;
+    }
+
+    .time{
+        font-weight: 800;
+        font-size: 0.8rem;
+    }
+
+    .day{
+        font-size: 1rem;
+    }
+
+    .sched-title{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .sched-tagline{
+        font-size: 0.8rem;
+        text-align: center;
+        margin-top: 4px;
+    }
+}
+
+
+/* ----------- VENUE SECTION */
+
+.venue-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 64px;
+}
+
+.venue-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.venue-title{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.venue-tagline{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.venue-photos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+}
+
+.venue-img{
+    flex: 1;
+    object-fit: cover;
+    border: 1px solid var(--gray);
+}
+
+.venue-desc{
+    font-size: 0.8rem;
+    margin-top: 32px;
+    text-align: center;
+    width: 80%;
+}
 
 /* ----------- TICKETS SECTION */
 
+.tickets-section{
+    margin-top: 32px;
+}
 
 .tickets-container{
     display: flex;
@@ -838,4 +1059,13 @@ a{
     border-top: 1px solid var(--gray);
     width: 100%;
     margin-bottom: 16px;
+}
+
+@media (max-width: 650px){
+    .tickets-section{
+        margin-top: 64px;
+    }
+    .tickets-container{
+        flex-direction: column;
+    }
 }
