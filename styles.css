@@ -80,6 +80,7 @@ body{
 }
 
 .container{
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1264,6 +1265,37 @@ button:hover {
 
 
 
+/*---------- FOOTER STYLES ----------*/
+
+.footer-section{
+    width: 100%;
+    border-top: 1px solid var(--gray);
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 16px;
+    position: relative;
+}
+
+.footer-title{
+    font-weight: 900;
+}
+
+.footer-tagline{
+    font-weight: 300;
+    font-size: 1rem;
+    margin-top: 2px;
+}
+
+.footer-rights{
+    margin-top: 16px;
+    font-size: 0.8rem
+}
+
+/*---------- FOOTER STYLES ----------*/
+
 
 
 
@@ -1293,9 +1325,14 @@ button:hover {
 
 .terms-section{
     margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .terms-container{
     margin-top: 64px;
+    width: 75%;
 }
 
 .terms-subhead{
@@ -1310,6 +1347,9 @@ button:hover {
 
 
 @media (max-width: 650px){
+    .terms-container{
+        width: 100%;
+    }
     .terms-subhead{
         font-weight: 700;
         font-size: 1.4rem;
@@ -1320,3 +1360,67 @@ button:hover {
         font-size: 1rem;
     }
 }
+
+
+
+
+
+
+
+
+
+.radial-blue{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: 20px;
+    left: -20%;
+    z-index: -1;
+    mix-blend-mode: screen;
+}
+
+
+.radial-orange{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: 20px;
+    right: -20%;
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+
+
+@media (max-width: 1100px){
+    .radial-blue{
+        display: none;
+    }
+
+    .radial-orange{
+        display: none;
+    }
+}
+
+
+.blue-gradient {
+    background: linear-gradient( #1487EB 0%, #36DDFF 100%);
+    filter: blur(60px); 
+}
+
+.orange-gradient {
+    background: linear-gradient( #FF6427 0%, #FB1B1B 100%);
+    filter: blur(60px); 
+}
+  
+.lightblue-gradient {
+    background: radial-gradient(circle at center, rgb(159, 230, 250) 0%, rgb(8, 226, 250) 100%);
+    filter: blur(200px); 
+}
+  
+  
+
+.lightorange-gradient {
+    background: radial-gradient(circle at center, #ff9f4a 30%, #FA9D1A 100%);
+    filter: blur(120px);
+}
+  
